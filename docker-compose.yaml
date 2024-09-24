@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   openvpn:
     build:
@@ -11,6 +9,7 @@ services:
       OVPN_SERVER_MASK: ${OVPN_SERVER_MASK}
       OVPN_LISTEN_BASE_URL: ${OVPN_LISTEN_BASE_URL}
       OVPN_AUTH: ${OVPN_AUTH}
+
     cap_add:
       - NET_ADMIN
     ports:
@@ -34,6 +33,7 @@ services:
       OVPN_LISTEN_BASE_URL: ${OVPN_LISTEN_BASE_URL}
       OVPN_AUTH: ${OVPN_AUTH}
       OVPN_AUTH_DB_PATH: ${OVPN_AUTH_DB_PATH}
+      OVPN_METRICS_PATH: ${OVPN_METRICS_PATH}
       LOG_LEVEL: ${LOG_LEVEL}
     network_mode: service:openvpn
     volumes:

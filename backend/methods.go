@@ -141,7 +141,7 @@ func (oAdmin *OvpnAdmin) renderClientConfig(username string) string {
 
 		conf := openvpnClientConfig{}
 		conf.Hosts = hosts
-		conf.CA = fRead(*EasyrsaDirPath + "/pki/ca.crt")
+		conf.CA = fRead(*EasyrsaDirPath + "/pki/issued/server.crt")
 		conf.TLS = fRead(*EasyrsaDirPath + "/pki/ta.key")
 
 		if *StorageBackend == "kubernetes.secrets" {

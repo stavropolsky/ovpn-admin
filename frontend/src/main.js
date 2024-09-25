@@ -160,7 +160,7 @@ new Vue({
         label: 'Download config',
         class: 'btn-info',
         showWhenStatus: 'Active',
-        Require2FA: "true",
+     // Require2FA: "true",
         showForServerRole: ['master', 'slave'],
         showForModule: ["core"],
       },
